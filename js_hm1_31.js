@@ -1,4 +1,4 @@
-// 28_Group_Channel, JS. HW_1
+// 31_Group_Channel, JS. HW_1
 
 // 1. Создать переменную “item_1”:
  let item_1;
@@ -86,21 +86,21 @@
  let age_3 = 60;
 
 //  29. Создать if в котором будите проверять значение переменной age_1:
-if (age_1 < age_2) {
-    console.log('You don’t have access cause your age is ' + age_1 + ' It’s less then ')};
-
-// 30. Если age_1 < age_2, вывести в консоль “You don’t have access cause your age is ” + age_1 + “ It’s less then ”
-if (age_1 >= age_2 && age_1 < age_3) { console.log('Welcome  !')}; 
-
+//  30. Если age_1 < age_2, вывести в консоль “You don’t have access cause your age is ” + age_1 + “ It’s less then ”
 //  31. Если age_1 >=  age_2 и age_1 <  age_3, вывести в консоль “Welcome  !”:
- if(age_1 >=  age_2 && age_1 < 60) [console.log(' Welcome  ! ')];
-
 //  32. Если age_1  > age_3, вывести в консоль “Keep calm and look Culture channel”.
- if (age_1  > age_3) {console.log('Keep calm and look Culture channel')};
-
 //  33. Иначе выводите “Technical work”:
- console.log('Technical work');
- 
+if (age_1 < age_2) {
+    console.log("You don't have access cause your age is " + age_1 + "It's less then ")
+    } 
+    else if (age_1 >= age_2 && age_1 <  age_3){
+        console.log("Welcome  !")}
+    else if (age_1  > age_3) {
+        console.log("Keep calm and look Culture channel")
+    } 
+    else {console.log("Technical work")
+};
+
 // =======================================================================================
 
 // Задача со звёздочкой 1*
@@ -110,48 +110,41 @@ if (age_1 >= age_2 && age_1 < age_3) { console.log('Welcome  !')};
 // }
 // Вывести в консоль результат работы функции с возрастами 17, 18, 61
 
-function checkAge1(age) {
-    if (age < age_2) {
-        console.log('You don’t have access cause your age is ' + age + ' It’s less then ');
-    }
-    else if (age >= age_2 && age < age_3) {
-        console.log('Welcome  !');
-    }
-    else if (age > age_3) {
-        console.log('Keep calm and look Culture channel');
-    }
-    else {
-        console.log('Technical work');
+const checkAge = function(age_1) {
+    if (age_1 < age_2) {
+        console.log("You don't have access cause your age is " + age_1 + "It's less then ")
     }  
+    else if (age_1 >= age_2 && age_1 <  age_3) {
+        console.log("Welcome  !")
+    }
+    else if (age_1  > age_3) {
+        console.log("Keep calm and look Culture channel")
+    } 
+    else {
+        console.log("Technical work")
+    }
 }
-
-checkAge1(17);
-checkAge1(18);
-checkAge1(61);
+checkAge(17);
+checkAge(18);
+checkAge(61);
 
 // Задача со звёздочкой 2*
 // Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка.
 
-function checkAge2(age) {
-    if (typeof age === "number") {
-        if (age < age_2) {
-            console.log('You don’t have access cause your age is ' + age + ' It’s less then ');
-        }
-        else if (age >= age_2 && age < age_3) {
-            console.log('Welcome  !');
-        }
-        else if (age > age_3) {
-            console.log('Keep calm and look Culture channel');
-        }
-        else {
-            console.log('Technical work');
-        }
+const checkAge2 = function(age_1) {
+    if (typeof age_1 != 'number') {console.log("not number")}
+    else if (age_1 < age_2) {
+        console.log("You don't have access cause your age is " + age_1 + "It's less then ")
     }
-    else {
-        console.log('Error: value', age, 'of function is not a Number, it\'s', typeof age);
+    else if (age_1 >= age_2 && age_1 <  age_3) {
+        console.log("Welcome  !")
+    }
+    else if (age_1  > age_3) {
+        console.log("Keep calm and look Culture channel")
+    } else {
+        console.log("Technical work")
     }
 }
-
 checkAge2(17);
 checkAge2("18");
 checkAge2(61);
@@ -159,8 +152,8 @@ checkAge2(61);
 // Задача со звёздочкой 3**
 // Преобразовать 2* таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number
 
-function checkAge3(age) {
-    age_n = Number(age);
+const checkAge3 = (age_1) => {
+    age_n = Number(age_1);
     if (!isNaN(age_n)) {
         if (age_n < age_2) {
             console.log('You don’t have access cause your age is ' + age_n + ' It’s less then ');
@@ -176,38 +169,19 @@ function checkAge3(age) {
         }
     }
     else {
-        console.log('Error: value', age, 'of function is not a Number, it\'s', age_n);
+        console.log('Error: value', age_1, 'of function is not a Number, it\'s', age_n);
     }
 }
-
 checkAge3("17");
 checkAge3("18a");
 checkAge3("aaa");
 
-// const checkAge3 = (age_1) => {
-//     if (typeof age_1 != 'number') {
-//         let ageNew = +typeof(age_1)
-//     }
-// if (age_1 < age_2) {
-//     console.log("You don't have access cause your age is " + age_1 + "It's less then ")
-// }  else if (age_1 >= age_2 && age_1 < age_3) {
-//     console.log("Welcome  !")
-// }
-//  else if (age_1  > age_3) {
-//     console.log("Keep calm and look Culture channel")
-// } else {
-//     console.log("Technical work")
-// }
-// }
-// checkAge3("17");
-// checkAge3("18a");
-// checkAge3("aaa");
 
 // Задача со звёздочкой 4***
 // Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке
 
-function checkAge4(age) {
-    age_n = Number(age);
+const checkAge4 = (age_1) => {
+    age_n = Number(age_1);
     if (!isNaN(age_n)) {
         if (age_n < age_2) {
             console.log('You don’t have access cause your age is ' + age_n + ' It’s less then ');
@@ -223,12 +197,10 @@ function checkAge4(age) {
         }
     }
     else {
-        console.log('Error: value', age, 'of function is not a Number, it\'s', age_n);
+        console.log('Error: value', age_1, 'of function is not a Number, it\'s', age_n);
     }
 }
 
-checkAge4(prompt('Input your age: ', [18]));
-
-
-
-
+checkAge4(prompt=('Input your age: ', [17]));
+checkAge4(prompt=('Input your age: ', [18]));
+checkAge4(prompt=('Input your age: ', [61]));
