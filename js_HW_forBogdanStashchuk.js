@@ -216,3 +216,4 @@ if (blueButton.color == 'blue') {
 
 blueButton.color == 'blue' && console.log('true: ' + 'blue button-is blue!') || 
 blueButton.color != 'blue' && console.log('false: ' + 'blue button-is not blue!');
+
