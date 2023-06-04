@@ -1,13 +1,10 @@
 // Создать объект и изменить/достать/удалить из него свойство через оператор '.' :
 const b={
     a:20, 
-    b: true
-};
+    b: true };
 
 b.b = false;
-
 console.log(b.b);
-
 delete b.b;
 
 // Записать в объект уже созданные переменные, сокращенным способом + вывести в консоль функцию из объекта:
@@ -16,7 +13,7 @@ let ourUserAge=26;
 
 const ourUserProfile ={
     ourUser, ourUserAge,
-    ourUser_isUnder18  :false,
+    ourUser_isUnder18: false,
     userPishet() {
         console.log('Privet podruzhka!')
     }
@@ -30,7 +27,7 @@ const person= {
     age:26,
    name: 'Lana'
 };
-const person2= Object.assign({},person);
+const person2 = Object.assign({},person);
 
 person2.salary = 1000;
 
