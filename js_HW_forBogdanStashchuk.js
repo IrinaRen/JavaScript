@@ -214,3 +214,76 @@ if (blueButton.color == 'blue') {
 blueButton.color == 'blue' && console.log('true: ' + 'blue button-is blue!') || 
 blueButton.color != 'blue' && console.log('false: ' + 'blue button-is not blue!');
 
+// Объединение объектов с помощью '...' :
+
+const buttonInfo = {
+    text: 'Hello'
+};
+
+const buttonStyle ={
+    color: 'yellow',
+    width: 200,
+    height: 300
+};
+
+const wholeButton = {
+    ...buttonInfo,
+    ...buttonStyle
+};
+console.table(wholeButton);
+
+// Создать выражение, используя "Шаблонные строки":
+
+const hello = 'Hello';
+const world = 'World!!';
+
+const greeting = `${hello} ${world}`;
+console.log(greeting);
+
+// Создать переменные со своими личными данными(Имя и город проживания)
+//  и объединить их используя "Шаблонные строки":
+
+const myName = 'My name is Irina';
+const mytown = 'I live in the town of Zhukovskiy';
+
+const myProfile = `${myName} ${mytown}`;
+console.log(myProfile);
+
+// Записать setTimeout как стрелочную функцию:
+
+setTimeout (() => {
+    console.log('Отложенное сообщение')
+}, 2000);
+
+// Написать функцию, которая будет уже иметь значение одного из параметров по умолчанию:
+
+function multByFactor (value, multiplier = 1) {
+    return value * multiplier
+};
+console.log(multByFactor(10, 2));
+console.log(multByFactor(5));
+
+// Написать функциональное выражение(анонимную функцию), которая будет уже иметь значение параметра по умолчанию:
+// function (value, multiplier = 1) {
+//     return value * multiplier
+// };
+
+const multiFactor = function (value, multiplier = 1) {
+        return value * multiplier
+    };
+
+console.log(multiFactor(25, 3));
+console.log(multiFactor(7));
+
+// Написать стрелочную функцию, которая будет уже иметь значение параметра по умолчанию:
+// (value, multiplier = 1) => {
+//     return value * multiplier
+// };
+const multArrowFunc = (value, multiplier = 1) => {
+        return value * multiplier
+    };
+
+console.log(multArrowFunc(11, 3));
+console.log(multArrowFunc(8));
+
+
