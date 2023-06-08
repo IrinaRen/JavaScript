@@ -368,3 +368,175 @@ try {
 console.log('Continue...')
 
 // ----------------------------------------------------------------
+// Создание массивов:
+
+const myArray =[1, 2, 3]
+console.log(myArray)
+
+const myArray2 = new Array(1, 2, 3)
+console.log(myArray2)
+
+// PUSH -
+// метод добавляющий элемент в конце массива:
+myArray.push(4)
+console.log(myArray)
+
+myArray.push(true)
+console.log(myArray)
+
+// POP -
+// метод удаляющий элемент в конце массива:
+myArray.pop()
+console.log(myArray)
+
+const removedElement = myArray.pop()
+console.log(myArray)
+console.log(removedElement)
+
+// UNSHIFT -
+// метод добавляющий элемент в начало массива:
+myArray.unshift(true)
+console.log(myArray)
+
+myArray.unshift('abs')
+console.log(myArray)
+
+// SHIFT -
+// метод удаляющий элемент в начале массива:
+myArray.shift()
+console.log(myArray)
+
+const removedElement2 = myArray.shift()
+console.log(myArray)
+console.log(removedElement2)
+
+// FOREACH -
+// в вызове этого элемента передаётся функция, 
+// которая вернет новые значения вне маасива(*не меняет сам массив):
+myArray.forEach(el => console.log(el *2))
+console.log(myArray)
+
+// MAP -
+// метод вызывающтй функцию столько раз, сколько элементов в массиве, 
+// при этом не меняет оригинальный массив, а формирует новый массив:
+const newArray = myArray.map(el => el *3)
+
+console.log(newArray);
+console.log(myArray);
+
+// MAP -
+//через анонимное функциональное выражение:
+
+const newArray2 = myArray.map(function (el){ 
+    return el *5});
+
+console.log(newArray2);
+console.log(myArray);
+
+// ----------------------------------------------------------------
+// ДЕСТРУКТУРИЗАЦИЯ :
+
+const usProfile = {
+    usName: 'Polina',
+    userAge: 20,
+    hasSignAgreement: false
+};
+const {usName, userAge} = usProfile;
+const {hasSignAgreement} = usProfile;
+
+console.log(usName);
+console.log(userAge);
+
+// ДЕСТРУКТУРИЗАЦИЯ массивов:
+const fruits = ['Apple', 'Banana']
+const [fruitOne, fruitTwo] = fruits
+
+console.log(fruitOne);
+console.log(fruitTwo);
+
+// ДЕСТРУКТУРИЗАЦИЯ в функцию:
+const userProfile3 = {
+    uName: 'Galina',
+    commentsQty: 223,
+    hasSignAgreement: false
+};
+
+const userInfo = ({uName, commentsQty}) => {
+    if (!commentsQty){
+        return `User ${uName} has no comments`
+    }
+    return `User ${uName} has ${commentsQty} comments`
+};
+
+console.log(userInfo(userProfile3));
+
+// ----------------------------------------------------------------
+//  IF :
+let val = 10
+
+if (val >5) {
+    val += 20
+}
+console.log(val);
+
+const person1 = { age: 20}
+if (!person1.name) {
+    console.log ('Имя не указано')
+}
+
+//  IF ELSE:
+let val2 = 20
+
+if (val2 < 5) {
+    val2 += 30
+} else {
+    val2 -=30
+}
+ console.log(val2)
+
+ //  IF ELSE IF:
+ const age = 25
+//  const age = 16
+//  const age = 7
+
+ if (age > 18) {
+    console.log ('Is abult')
+ } else if (age >= 12) {
+    console.log ('Is teenager')
+ } else {
+    console.log ('Is child')
+ }
+
+//  Тоже самое, но используем только IF :
+
+if (age >= 18) {
+    console.log ('Is abult')
+ } 
+
+ if (age >= 12 && age <18 ) {
+    console.log ('Is teenager')
+ } 
+ 
+if (age < 12) {
+    console.log ('Is child')
+ }
+
+// -------------------------------------------------------
+// Использование IF в функциях :
+
+const sumPositiveNumber = (a, b) => {
+    if (typeof a !== 'number' || typeof b !== 'number') {
+    return 'One of the arguments is not a number'
+}
+if (a <=0 || b <= 0) {
+    return 'Numbers are not positive'
+} 
+return a+b}
+
+console.log(sumPositiveNumber(1,2))
+console.log(sumPositiveNumber('a',true))
+console.log(sumPositiveNumber(-10, 5 ))
+
+
+
+
