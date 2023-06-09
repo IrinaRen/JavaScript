@@ -537,6 +537,141 @@ console.log(sumPositiveNumber(1,2))
 console.log(sumPositiveNumber('a',true))
 console.log(sumPositiveNumber(-10, 5 ))
 
+// ----------------------------------------------------------------
+// SWITCH :
+const month = 1
+// const month = 2
+// const month = 6
+
+switch (month) {
+    case 12:
+        console.log('Декабрь')
+        break
+    case 1:
+        console.log('Январь')
+        break
+    case 2:
+        console.log('Февраль')
+        break
+    default:
+        console.log('Это не зимний месяц')
+}
+// ----------------------------------------------------------------
+// ТЕРНАРНЫЙ ОПЕРАТОР :
+// Пример 1 :
+const value = 11
+// const value = false
+
+value
+  ? console.log('Условие истинно')
+  : console.log('Условие ложно')
+
+// Пример 2 :
+// const value1 = 11
+// const value2 = 25
+
+// value1 & value2
+//    ? myFn1(value1, value2)
+//    : myFn2();
+
+// Пример 3 :
+let value3 = 11
+
+ console.log(value3 >= 0 ? value : -value)
+
+ value3 = -5
+ const res = value3 >= 0 ? value3 : -value3 
+ console.log(res)
+
+// ----------------------------------------------------------------
+// ЦИКЛ FOR  :
+ for (let i = 0; i<5; i++) {
+    console.log(i)
+ }
+
+//  Цикл FOR для массивов :
+// *(не рекомендуется для массивов, предпочтительнее 'foreach' и 'map')
+const myAr = ['first', 'second', 'third']
+
+ for (let i = 0; i < myAr.length; i++) {
+     console.log(myAr[i])
+ }
+
+// Метод массивов FOREACH :
+myAr.forEach((element, index) => {
+    console.log(element, index)
+})
+
+// Цикл WHILE :
+let i = 3
+
+while (i < 5) {
+    console.log(i)
+    i++
+}
+
+// Цикл DO WHILE :
+ i = 10
+
+ do {
+    console.log(i)
+    i++
+ } while (i < 5) 
+     
+// Цикл FOR IN :
+const myObj = {
+    x: 10,
+    y: true,
+    z: 'abc'
+}
+for (const key in myObj){
+    console.log(key, myObj[key])
+}
+// ----------------------------------------------------------------
+// FOREACH ДЛЯ ОБЪЕКТОВ в сочетании с 'Object.keys':
+Object.keys(myObj).forEach(key => {
+    console.log(key, myObj[key])
+})
+
+// Перебрать ЗНАЧЕНИЯ у объекта при помощи 'Object.values':
+Object.values(myObj).forEach(value => {
+    console.log(value)
+})
+
+// console.dir(Object);
+// Цикл FOR IN для массивов:
+// *(не рекомендуется для массивов, предпочтительнее 'foreach' и 'map')
+const myArr = [true, 10, 'abc', null]
+
+for (const key in myArr) {
+    console.log(myArr[key])
+}
+
+// Цикл FOR OFF для массивов :
+// *В этом примере перебераются символы строки
+const myString = 'Hey'
+
+for (const letter of myString) {
+    console.log(letter)
+}
+
+// Цикл FOR OFF для массивов :
+// *В этом примере перебераются все элементы массива;
+// FOR OFF нельзя использовать для объектов;
+// *(не рекомендуется для массивов, предпочтительнее 'foreach' и 'map')
+// const myArr = [true, 10, 'abc', null]
+for (const element of myArr) {
+    console.log(element)
+}
+
+// Цикл FOREACH для массивов :
+// Метод массивов FOREACH :
+myArr.forEach(element => {
+    console.log(element)
+})
+
+// МОДУЛИ
+
 
 
 
