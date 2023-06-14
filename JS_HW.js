@@ -65,7 +65,7 @@
  
 //  22. Создать переменную item_7 и в ней преобразовать item_6 в String:
  let item_7 = String(item_6);
-//  let item_7 = "item_6"; (?)
+//  let item_7 = "item_6"; 
 
 //  23. Создать переменную item_7_type:
  let item_7_type;
